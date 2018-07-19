@@ -1,0 +1,31 @@
+#!/bin/sh
+
+if [ -z "$API_KEY" ] || [ -z "$API_SECRET" ]
+then
+  # OpenTok Project Configuration (find these at https://tokbox.com/account)
+  export API_KEY=45633772
+  export API_SECRET=3c56782a161c45428d607a8d1319bae1f0afe119
+
+  # SIP Destination Configuration (find these with your SIP server provider)
+  export SIP_URI=sip:+94773333263@tokboxdialout.pstn.twilio.com;transport=tls
+  export SIP_USERNAME=twilioauth
+  export SIP_PASSWORD=Innovationfoundry123
+  export SIP_SECURE=false
+
+  # SIP from (optional)
+  export SIP_FROM=+15053080969
+
+fi
+
+if [ -d "cache" ]
+then
+  rm -rf cache/
+fi
+
+php -S 0.0.0.0:8080 -t web/
+
+
+
+
+
+

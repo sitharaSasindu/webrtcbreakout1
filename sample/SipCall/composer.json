@@ -1,0 +1,11 @@
+{
+  "name": "sipcall-php",
+  "minimum-stability":"dev",
+  "require": {
+    "slim/slim": "2.*",
+    "gregwar/cache": "1.0.*",
+    "opentok/opentok": "dev-master",
+    "psr/log": "^1.0@dev",
+    "phpseclib/mcrypt_compat": "dev-master"
+  }
+}
